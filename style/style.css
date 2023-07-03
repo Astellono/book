@@ -88,11 +88,11 @@ nav {
     display: none;
     height: 40px;
     margin: 0 auto;
-    margin-bottom: 15px;
+    
 }
 .cross {
     display: none;
-    margin-top: 15px;
+    
     width: 40px;
     border: none;
 }
@@ -115,10 +115,7 @@ nav {
     background-color: #2a0e3e;
     box-shadow: 0px 0px 12px 6px rgba(82, 17, 107, 0.2);
 }
-.menu__item:hover:first-child {
-    
-    box-shadow: 0px 0px 12px 1px rgba(82, 17, 107, 0.2);
-}  
+
 .menu__item:hover .menu__link {
     color: white;
 }
@@ -143,9 +140,10 @@ nav {
         display: flex;
         align-items: center;
         flex-direction: column;
+        justify-content: space-between;
     }
     .menu__item {
-        margin-bottom: 20px;
+        margin-bottom: 0px;
     }
     .header__title {
         font-size: 32px;
