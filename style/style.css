@@ -69,7 +69,7 @@ header {
 }
 
 .menu {
-    margin-top: 20px;
+    margin: 20px 0;
     height: max-content
 }
 
@@ -149,7 +149,11 @@ nav {
 .menu__item:active .menu__link {
     color: white;
 }
-
+.main {
+    background-color: #2a0e3e;
+    height: 300px;
+    width: 100%;
+}
 
 
 @media screen and (max-width: 500px) {
