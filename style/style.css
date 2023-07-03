@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Andika';
+    src: URL('fonts/Andika/Andika-R.ttf') format('truetype');
+}
 header {
     width: 100%;
     height: max-content;
@@ -5,7 +9,9 @@ header {
    
 
 }
-
+* {
+    font-family: 'Andika';
+}
 .visble-burger {
     overflow:hidden !important;
     height: 308px !important;
