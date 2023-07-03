@@ -1,7 +1,4 @@
-@font-face {
-    font-family: 'Andrika';
-    src: URL() format('truetype');
-}
+
 @font-face {
     font-family: 'Andrika';
     src: local('Andrika'), local('Andika-R'), url('/fonts/Andika/Andika-R.ttf') format('truetype');
