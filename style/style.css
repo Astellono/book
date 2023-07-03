@@ -1,6 +1,12 @@
 @font-face {
     font-family: 'Andrika';
-    src: URL(/fonts/Andika/Andika-R.ttf) format('truetype');
+    src: URL() format('truetype');
+}
+@font-face {
+    font-family: 'Andrika';
+    src: local('Andrika'), local('Andika-R'), url('/fonts/Andika/Andika-R.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 header {
     width: 100%;
