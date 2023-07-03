@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/style.css?ver=200">
+    <link rel="stylesheet" href="style/style.css?ver=201">
     <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <script src="js/burger.js" defer></script>
     <title>Document</title>
 </head>
 
@@ -22,12 +23,25 @@
 
     <section class="menu">
         <div class="container">
+
             <nav>
-                <ul class="menu__list">
-                    <li class="menu__item">Главная</li>
-                    <li class="menu__item">Книги</li>
-                    <li class="menu__item">lorem</li>
-                    <li class="menu__item">lorem</li>
+                <img class="menu__burgerImg" src="img/burger.svg" id="burger" alt="" srcset="">
+                <ul class="menu__list" id="menu">
+                    <li class="menu__item cross" id="cross">
+                        <img class="menu__cross" src="img/cross.svg">
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">lorem</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">lorem</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">lorem</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">lorem</a>
+                    </li>
                 </ul>
             </nav>
         </div>
