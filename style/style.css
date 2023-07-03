@@ -136,6 +136,9 @@ nav {
 
 
 @media screen and (max-width: 500px) {
+    .header__title {
+        height: 70px;
+    }
     .menu {
         margin-top: 5px;
     }
