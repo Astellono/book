@@ -7,6 +7,7 @@ header {
 
 * {
     font-family: 'Playfair Display', serif;
+    box-sizing: border-box;
 }
 
 .visble-burger {
@@ -58,7 +59,7 @@ header {
     margin: 0 auto;
     max-width: 1000px;
     height: 100%;
-
+    padding: 0 20px;
 }
 
 .menu {
@@ -144,10 +145,77 @@ nav {
 }
 
 .main {
-    background-color: #2a0e3e;
-    height: 300px;
+    
+    background-image: url(/img/topImg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
     width: 100%;
+        
+}
+.main:hover .main__desc {
+    text-shadow: #FC0 1px 0 10px;
+        
+}
+.container__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+    width: 500px;
+    color: rgb(255, 255, 255, 1);
+  
+}
+.main__title {
+    font-size: 52px;
+    margin-bottom: 20px;
+    transition: all 0.2s ease-in-out;
+}
+.main__text {
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 40px;
+}
+
+.main__imgBox {
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid rgba(173, 174, 97);
+    
+}
+.main__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main__link {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    background-color: rgba(173, 174, 97);
+    outline: 1px solid green;
     color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.main__link:hover {
+    opacity: 0.5;
+}
+.main__link:active {
+    transition: all 0s ease-in-out;
+    opacity: 1;
+    background: black;
 }
 
 
@@ -185,6 +253,9 @@ nav {
 
     .cross {
         display: block;
+    }
+    .main__imgBox {
+        display: none;
     }
 
 }
