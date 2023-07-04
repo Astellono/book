@@ -168,9 +168,10 @@ nav {
         
 }
 .main:hover .main__desc {
-    text-shadow: #FC0 1px 0 10px;
+    text-shadow: rgb(97, 237, 118) 1px 0 10px;
         
 }
+
 .container__main {
     display: flex;
     align-items: center;
@@ -184,6 +185,7 @@ nav {
     margin-right: 20px;
     width: 500px;
     color: rgb(255, 255, 255, 1);
+    text-shadow: #FC0 1px 0 10px;
   
 }
 .main__title {
