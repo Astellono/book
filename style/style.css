@@ -1,11 +1,4 @@
-
-@font-face {
-    font-family: 'Andika';
-  
-    src:
-        url('/fonts/Andika/Andika-R.ttf') format('truetype');
-      
-}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 header {
     width: 100%;
@@ -13,7 +6,7 @@ header {
 }
 
 * {
-    font-family: 'Andika';
+    font-family: 'Playfair Display', serif;
 }
 
 .visble-burger {
@@ -43,9 +36,9 @@ header {
     left: 0;
     right: 0;
 
-    font-size: 42px;
-    font-weight: 400;
-    letter-spacing: 3px;
+    font-weight: 800;
+    
+    
 
 
 }
@@ -149,10 +142,12 @@ nav {
 .menu__item:active .menu__link {
     color: white;
 }
+
 .main {
     background-color: #2a0e3e;
     height: 300px;
     width: 100%;
+    color: white;
 }
 
 
