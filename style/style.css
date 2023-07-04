@@ -93,7 +93,7 @@ nav {
 
     border: 1px solid #5B2680;
     border-radius: 15px;
-    width: 100px;
+    width: 130px;
     height: 40px;
     transition: all 0.3s ease-in-out;
 }
@@ -125,6 +125,8 @@ nav {
     width: inherit;
     height: inherit;
     font-style: italic;
+    font-weight: 800;
+    font-size: 20px;
     color: #5B2680;
     transition: all 0.3s ease-in-out;
 }
