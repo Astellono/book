@@ -6,6 +6,7 @@ input,
 textarea,
 button,
 select,
+
 a {
     -webkit-tap-highlight-color: transparent;
 }
@@ -16,10 +17,18 @@ html {
     font-family: 'Playfair Display', serif;
     box-sizing: border-box;
 }
-
+.menuAdmin {
+    top:5px;
+    left: 0;
+    position: absolute;
+    border-bottom: 1px solid black;
+    font-size: 18px;
+}
 header {
+    position: relative;
     width: 100%;
     height: max-content;
+    padding-top: 2px;
 }
 
 .visble-burger {
@@ -270,12 +279,14 @@ nav {
 .news__item {
     display: flex;
     margin: 30px 0;
-   
+    box-shadow: 0px 0px 22px 11px rgba(34, 60, 80, 0.2);
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 
 .news__imgBox {
-   
+    
     width: 30%;
     border-radius: 10px;
     overflow: hidden;
@@ -292,6 +303,10 @@ nav {
     display: flex;
     width: 70%;
     flex-direction: column;
+    padding-right: 15px;
+    text-align: justify;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 .news__textTitle {
@@ -307,6 +322,7 @@ nav {
 .news__date {
     text-align: right;
     color: #2a0e3e;
+    padding-right: 15px;
 }
 
 

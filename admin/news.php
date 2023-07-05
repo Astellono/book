@@ -1,7 +1,7 @@
 <?php
-// if (!isset($_COOKIE["admin"]))
+if (!isset($_COOKIE["admin"]))
 
-//     header('Location: /admin.html');
+    header('Location: /admin.html');
 
 
 require_once '../php/connect.php'

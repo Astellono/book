@@ -27,7 +27,7 @@ if (!isset($_COOKIE["admin"]))
                 <a href="/admin/news.php" class="admin__itemName">Книги</a>
             </li>
             <li class="admin__item">
-                <a href="/admin/news.php" class="admin__itemName">На сайт</a>
+                <a href="/index.php" class="admin__itemName">На сайт</a>
             </li>
         </ul>
     </div>

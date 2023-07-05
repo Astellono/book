@@ -23,10 +23,18 @@ require_once 'php/connect.php'
 
 <body>
     <header>
+        <?php
+        if (isset($_COOKIE["admin"]))
+          echo  '<a class="menuAdmin" href="admin/adminPanel.php">В админку</a>'
+
+       
+        ?>
+        
+       
+
+
         <img class="header__title" src="img/logo.png">
-        <!-- <div class="razdlBlock">
-            <img class="razdl" src="img/Fotoram.io.png" alt="" srcset="">
-        </div> -->
+
         <hr>
 
     </header>
