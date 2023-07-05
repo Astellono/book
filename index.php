@@ -112,47 +112,6 @@ require_once 'php/connect.php'
                 }
                 ?>
 
-
-                <!--  -->
-
-                <!-- <li class="news__item">
-                    <div class="news__imgBox">
-                        <img class="news__img" src="img/test.jpg" alt="" srcset="">
-                    </div>
-                    <div class="news__textBlock">
-                        <h3 class="news__textTitle">
-                            Lorem
-                        </h3>
-                        <p class="news__textDesc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quis deleniti enim laborum
-                            quos eius porro sunt debitis a praesentium. Doloribus iusto similique deserunt autem sint
-                            temporibus magnam. Nam, sint!
-                        </p>
-                        <p class="news__date">
-                            05.03.2222
-                        </p>
-                    </div>
-                </li>
-                <hr>
-                <li class="news__item">
-                    <div class="news__imgBox">
-                        <img class="news__img" src="img/test.jpg" alt="" srcset="">
-                    </div>
-                    <div class="news__textBlock">
-                        <h3 class="news__textTitle">
-                            Lorem
-                        </h3>
-                        <p class="news__textDesc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quis deleniti enim laborum
-                            quos eius porro sunt debitis a praesentium. Doloribus iusto similique deserunt autem sint
-                            temporibus magnam. Nam, sint!
-                        </p>
-                        <p class="news__date">
-                            05.03.2222
-                        </p>
-                    </div>
-                </li> -->
-
             </ul>
         </div>
     </section>

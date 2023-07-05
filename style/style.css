@@ -275,8 +275,8 @@ nav {
 
 
 .news__imgBox {
-    max-width: 300px;
-    
+   
+    width: 30%;
     border-radius: 10px;
     overflow: hidden;
     margin-right: 35px;
@@ -290,7 +290,7 @@ nav {
 
 .news__textBlock {
     display: flex;
-    width: 100%;
+    width: 70%;
     flex-direction: column;
 }
 
@@ -331,15 +331,18 @@ nav {
         
     }
     .news__item {
-        max-width: 100%;
+        height: 300px;
         flex-direction: column;
        
 
     }
     .news__imgBox {
-        height: 200px;
-        max-width: 100%;
+        
+        width: 100%;
         margin-right: 0;
+    }
+    .news__textBlock {
+        width: 100%;
     }
     .news__textTitle {
         margin-bottom: 10px;
