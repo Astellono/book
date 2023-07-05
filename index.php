@@ -1,3 +1,10 @@
+<?php
+
+require_once 'php/connect.php'
+
+    ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,7 +85,37 @@
                 Новости
             </h2>
             <ul class="news__list">
-                <li class="news__item">
+
+                <?php
+                $news = mysqli_query($connect, "SELECT * FROM `news`");
+                $news = mysqli_fetch_all($news);
+
+                foreach ($news as $news) {
+                    ?>
+                    <li class="news__item">
+                        <div class="news__imgBox">
+                            <img class="news__img" src="<?= $news[4] ?>" alt="" srcset="">
+                        </div>
+                        <div class="news__textBlock">
+                            <h3 class="news__textTitle">
+                                <?= $news[1] ?>
+                            </h3>
+                            <p class="news__textDesc">
+                                <?= $news[2] ?>
+                            </p>
+                            <p class="news__date">
+                                <?= $news[3] ?>
+                            </p>
+                        </div>
+                    </li>
+                    <?php
+                }
+                ?>
+
+
+                <!--  -->
+
+                <!-- <li class="news__item">
                     <div class="news__imgBox">
                         <img class="news__img" src="img/test.jpg" alt="" srcset="">
                     </div>
@@ -114,26 +151,7 @@
                             05.03.2222
                         </p>
                     </div>
-                </li>
-                <hr>
-                <li class="news__item">
-                    <div class="news__imgBox">
-                        <img class="news__img" src="img/test.jpg" alt="" srcset="">
-                    </div>
-                    <div class="news__textBlock">
-                        <h3 class="news__textTitle">
-                            Lorem
-                        </h3>
-                        <p class="news__textDesc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quis deleniti enim laborum
-                            quos eius porro sunt debitis a praesentium. Doloribus iusto similique deserunt autem sint
-                            temporibus magnam. Nam, sint!
-                        </p>
-                        <p class="news__date">
-                            05.03.2222
-                        </p>
-                    </div>
-                </li>
+                </li> -->
 
             </ul>
         </div>
