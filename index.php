@@ -15,7 +15,7 @@ require_once 'php/connect.php'
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/fav.ico">
     <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/style.css?ver=224 ">
+    <link rel="stylesheet" href="style/style.css?ver=225">
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <script src="js/burger.js" defer></script>
     <title>Bifrǫst</title>
