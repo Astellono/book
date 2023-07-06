@@ -4,7 +4,7 @@ if (!isset($_COOKIE["admin"]))
     header('Location: /admin.html');
 
 
-require_once '../php/connect.php'
+require_once '../../php/connect.php';
 
     ?>
 
@@ -16,10 +16,10 @@ require_once '../php/connect.php'
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="../../style/reset.css">
 
-    <link rel="stylesheet" href="/admin/admin.css">
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="../admin.css">
+    <link rel="stylesheet" href="../../style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
@@ -38,7 +38,7 @@ require_once '../php/connect.php'
                 <a name="news"></a>
                 Новости
             </h2>
-            <a class="back" href="../admin/adminPanel.php">Назад</a>
+            <a class="back" href="../adminPanel.php">Назад</a>
             <ul class="news__list">
 
                 <?php
@@ -53,9 +53,9 @@ require_once '../php/connect.php'
                         </div>
                         <div class="news__textBlock">
                             <div class="CRUD__block">
-                                <a href="/admin/change.php?id=<?= $news[0] ?>" style="margin-right: 7px;"><img
-                                        src="../admin/change.svg"></a>
-                                <a href="/admin/dell.php?id=<?= $news[0] ?>"><img src="../admin/del.svg"></a>
+                                <a href="change.php?id=<?= $news[0] ?>" style="margin-right: 7px;"><img
+                                        src="../svg/change.svg"></a>
+                                <a href="dell.php?id=<?= $news[0] ?>"><img src="../svg/del.svg"></a>
                             </div>
                             <h3 class="news__textTitle">
                                 <?= $news[1] ?>
@@ -82,7 +82,7 @@ require_once '../php/connect.php'
 
                 Добавить
             </h2>
-            <form action="/admin/add.php" class="form" method="post">
+            <form action="add.php" class="form" method="post">
 
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Заголовок</label>
