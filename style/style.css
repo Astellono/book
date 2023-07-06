@@ -16,6 +16,7 @@ html {
 * {
     font-family: 'Playfair Display', serif;
     box-sizing: border-box;
+    text-align: justify;
 }
 .menuAdmin {
     top:5px;

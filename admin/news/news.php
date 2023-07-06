@@ -92,7 +92,7 @@ require_once '../../php/connect.php';
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Текст</label>
-                    <textarea id='textarea' style='height:300px;' cols='50' wrap='hard' name="desc" class="form-control"></textarea>
+                    <textarea id='textarea' style='height:300px;' name="desc" class="form-control"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Ссылка на картинку</label>
