@@ -21,7 +21,7 @@ if (count($admin) == 0) {
     exit();
 }
 
-setcookie('admin', $admin['login'], time() + 3600, "/");
+setcookie('admin', $admin['login'], time() + 3600 * 24 * 30, "/");
 
 $mysql->close();
 

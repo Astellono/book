@@ -27,6 +27,7 @@ require_once '../../php/connect.php';
             padding-left: 0;
         }
     </style>
+    
     <title>News</title>
 </head>
 
@@ -61,7 +62,7 @@ require_once '../../php/connect.php';
                                 <?= $news[1] ?>
                             </h3>
                             <p class="news__textDesc">
-                                <?= $news[2] ?>
+                                <?= nl2br($news[2]) ?>
                             </p>
                             <p class="news__date">
                                 <?= $news[3] ?>
@@ -82,7 +83,7 @@ require_once '../../php/connect.php';
 
                 Добавить
             </h2>
-            <form action="add.php" class="form" method="post">
+            <form action="add.php" id='form' class="form" method="post">
 
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Заголовок</label>
@@ -91,10 +92,10 @@ require_once '../../php/connect.php';
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Текст</label>
-                    <textarea style='height:300px' name="desc" class="form-control"></textarea>
+                    <textarea id='textarea' style='height:300px;' cols='50' wrap='hard' name="desc" class="form-control"></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label" ">Ссылка на картинку</label>
+                    <label for="exampleInputPassword1" class="form-label">Ссылка на картинку</label>
                 <input name=" img" type="text" class="form-control">
                 </div>
                 <div class="mb-3">
@@ -104,7 +105,7 @@ require_once '../../php/connect.php';
 
                 <button type="submit" class="btn btn-primary">Добавить</button>
             </form>
-
+            
         </div>
     </section>
 </body>

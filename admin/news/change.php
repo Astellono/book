@@ -70,7 +70,7 @@ $news = mysqli_fetch_array($news)
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Текст</label>
-                <textarea style='height:300px' name="desc" class="form-control" value=""><?= $news['desc'] ?></textarea>
+                <textarea style='height:300px; white-space: pre;' name="desc" class="form-control" value=""><?= $news['desc'] ?></textarea>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label" ">Ссылка на картинку</label>
