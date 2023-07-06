@@ -55,7 +55,7 @@ require_once '../../php/connect.php';
                             <div class="CRUD__block">
                                 <a href="change.php?id=<?= $news[0] ?>" style="margin-right: 7px;"><img
                                         src="../svg/change.svg"></a>
-                                <a href="dell.php?id=<?= $news[0] ?>"><img src="../svg/del.svg"></a>
+                                <a onclick="return confirm('Are you sure?')" href="dell.php?id=<?= $news[0] ?>" ><img src="../svg/del.svg"></a>
                             </div>
                             <h3 class="news__textTitle">
                                 <?= $news[1] ?>
