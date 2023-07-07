@@ -7,7 +7,7 @@ $pass = $_POST['pass'];
 
 
 
-$mysql = new mysqli('localhost', 'astellono_bifros', '123137', 'astellono_bifros');
+$mysql = new mysqli('localhost', 'root', 'root', 'bifrost');
 
 // $mysql->query("INSERT INTO `admin` (`login`, `pass`) VALUES('$login', '$pass')"); Регистрация
 $result = $mysql->query("SELECT * FROM `admin` WHERE `login` = '$login' AND `pass` = '$pass'");

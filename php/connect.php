@@ -1,5 +1,5 @@
 <?php
-    $connect = mysqli_connect('localhost', 'astellono_bifros', '123137', 'astellono_bifros');
+    $connect = mysqli_connect('localhost', 'root', 'root', 'bifrost');
     if (!$connect) {
         die('Error');
     }
