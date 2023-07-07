@@ -48,9 +48,7 @@ require_once 'php/connect.php'
                         <li class="menu__item cross" id="cross">
                             <img class="menu__cross" src="img/cross.svg">
                         </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">Главная</a>
-                        </li>
+                       
                         <li class="menu__item">
                             <a class="menu__link" href="#news">Новости</a>
                         </li>

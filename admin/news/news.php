@@ -6,7 +6,7 @@ if (!isset($_COOKIE["admin"]))
 
 require_once '../../php/connect.php';
 
-    ?>
+?>
 
 
 <!DOCTYPE html>
@@ -27,12 +27,12 @@ require_once '../../php/connect.php';
             padding-left: 0;
         }
     </style>
-    
+    <script src="../../js/newsPag.js" defer></script>
     <title>News</title>
 </head>
 
 <body>
-    <section class="news">
+    <section name="news" class="news">
         <div class="container">
 
             <h2 class="news__title">
@@ -56,7 +56,8 @@ require_once '../../php/connect.php';
                             <div class="CRUD__block">
                                 <a href="change.php?id=<?= $news[0] ?>" style="margin-right: 7px;"><img
                                         src="../svg/change.svg"></a>
-                                <a onclick="return confirm('Are you sure?')" href="dell.php?id=<?= $news[0] ?>" ><img src="../svg/del.svg"></a>
+                                <a onclick="return confirm('Are you sure?')" href="dell.php?id=<?= $news[0] ?>"><img
+                                        src="../svg/del.svg"></a>
                             </div>
                             <h3 class="news__textTitle">
                                 <?= $news[1] ?>
@@ -77,6 +78,11 @@ require_once '../../php/connect.php';
                 ?>
 
             </ul>
+            <div class="news__btnBlock">
+                <button class="news__btn" id='watchNews'>Показать еще</button>
+                <button class="news__btn" id='clear'>Cвернуть</button>
+            </div>
+
         </div>
         <div class="container">
             <h2 class="news__title" style="border-bottom:none; font-size:24px">
@@ -96,7 +102,7 @@ require_once '../../php/connect.php';
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Ссылка на картинку</label>
-                <input name=" img" type="text" class="form-control">
+                    <input name=" img" type="text" class="form-control">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Дата</label>
@@ -105,7 +111,7 @@ require_once '../../php/connect.php';
 
                 <button type="submit" class="btn btn-primary">Добавить</button>
             </form>
-            
+
         </div>
     </section>
 </body>
