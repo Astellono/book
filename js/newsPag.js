@@ -12,15 +12,17 @@ let y = 0;
 btnClear.style.display = 'none'
 counter = list.length
 
+
+if (list.length <= 3) {
+    btnWatch.style.display = 'none'
+} else btnWatch.style.display = 'inline-block'
+
 btnWatch.addEventListener('click', () => {
 
-  
 
-
-    
     btnClear.style.display = 'inline'
-    
-    console.log( window.scrollY)
+
+    console.log(window.scrollY)
     for (i = counter - temp - 3; i < counter - temp; i++) {
         if (list[i] != undefined) {
 
@@ -65,6 +67,6 @@ function scrollTo(hash) {
 
 let date = document.querySelectorAll('.news__date');
 date.forEach(element => {
-    element.textContent = element.textContent.trim().substring(0,11)
+    element.textContent = element.textContent.trim().substring(0, 11)
 });
 

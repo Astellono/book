@@ -50,9 +50,9 @@ header {
 }
 .header__title {
     
-    width: max-content;
+    
     margin-left: -6px;
-    height: 60px;
+    height: 40px;
     color: #5B2680;
     
 
@@ -389,7 +389,7 @@ nav {
 
 @media screen and (max-width: 500px) {
     .header__title {
-        height: 50px;
+        height: 40px;
     }
 
     .menu {
