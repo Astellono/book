@@ -13,9 +13,9 @@ require_once '../../php/connect.php';
 
 
 
-mysqli_query($connect, "INSERT INTO `news` (`id`, `title`, `desc`, `date`, `img`) VALUES (NULL, '$title', '$desc', '$date', '$img')");
+mysqli_query($connect, "INSERT INTO `news` (`id`, `title`, `desc`, `date`, `img`) VALUES (NULL, '$title', '$desc', NULL, '$img')");
 
-
+// mysqli_query($connect, "INSERT * DATE_FORMAT(`date_registration`,`%d.%m.%Y`) as `date_reg` FROM `news`");
 
 
 

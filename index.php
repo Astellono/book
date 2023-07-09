@@ -15,7 +15,7 @@ require_once 'php/connect.php'
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/fav.ico">
     <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/style.css?ver=227">
+    <link rel="stylesheet" href="style/style.css?ver=229">
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <script src="js/burger.js" defer></script>
     <script src="js/newsPag.js" defer></script>
@@ -33,37 +33,38 @@ require_once 'php/connect.php'
 
 
 
-
-            <img class="header__title" src="img/logo.png">
-
-            <hr>
-
+            <div class="container header__container">
+                <img class="header__title" src="img/logo.png">
+                <img class="menu__burgerImg" src="img/burger.svg" id="burger" alt="" srcset="">
+                <nav id="menu">
+                        
+                        <ul class="menu__list" >
+                            <li class="menu__item cross" id="cross">
+                                <img class="menu__cross" src="img/cross.svg">
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#news">Главная</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#news">Новости</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#book">Книги</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#author">Об авторе</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+            </div>
         </header>
 
-        <section class="menu">
-            <div class="container">
+       
 
-                <nav>
-                    <img class="menu__burgerImg" src="img/burger.svg" id="burger" alt="" srcset="">
-                    <ul class="menu__list" id="menu">
-                        <li class="menu__item cross" id="cross">
-                            <img class="menu__cross" src="img/cross.svg">
-                        </li>
-                       
-                        <li class="menu__item">
-                            <a class="menu__link" href="#news">Новости</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#book">Книги</a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#author">Об авторе</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <hr>
-        </section>
+          
+       
         <section class="main">
             <div class="container container__main">
                 <div class="main__desc">

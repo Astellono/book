@@ -61,3 +61,10 @@ for (i = 0; i < counter - 3; i++) {
 function scrollTo(hash) {
     location.hash = "#" + hash;
 }
+
+
+let date = document.querySelectorAll('.news__date');
+date.forEach(element => {
+    element.textContent = element.textContent.trim().substring(0,11)
+});
+

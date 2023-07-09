@@ -41,8 +41,9 @@ require_once '../../php/connect.php';
             </h2>
             <a class="back" href="../adminPanel.php">Назад</a>
             <ul class="news__list">
-
+            <!-- SELECT *,DATE_FORMAT(date_registration,'%d.%m.%Y') as date_reg FROM users -->
                 <?php
+                
                 $news = mysqli_query($connect, "SELECT * FROM `news`");
                 $news = mysqli_fetch_all($news);
 
@@ -86,7 +87,6 @@ require_once '../../php/connect.php';
         </div>
         <div class="container">
             <h2 class="news__title" style="border-bottom:none; font-size:24px">
-
                 Добавить
             </h2>
             <form action="add.php" id='form' class="form" method="post">
@@ -104,10 +104,10 @@ require_once '../../php/connect.php';
                     <label for="exampleInputPassword1" class="form-label">Ссылка на картинку</label>
                     <input name=" img" type="text" class="form-control">
                 </div>
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Дата</label>
                     <input name="date" type="text" class="form-control">
-                </div>
+                </div> -->
 
                 <button type="submit" class="btn btn-primary">Добавить</button>
             </form>
