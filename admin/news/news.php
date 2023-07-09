@@ -28,6 +28,8 @@ require_once '../../php/connect.php';
         }
     </style>
     <script src="../../js/newsPag.js" defer></script>
+   
+    <link href="../../node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
     <title>News</title>
 </head>
 
@@ -41,9 +43,9 @@ require_once '../../php/connect.php';
             </h2>
             <a class="back" href="../adminPanel.php">Назад</a>
             <ul class="news__list">
-            <!-- SELECT *,DATE_FORMAT(date_registration,'%d.%m.%Y') as date_reg FROM users -->
+                <!-- SELECT *,DATE_FORMAT(date_registration,'%d.%m.%Y') as date_reg FROM users -->
                 <?php
-                
+
                 $news = mysqli_query($connect, "SELECT * FROM `news`");
                 $news = mysqli_fetch_all($news);
 
@@ -97,8 +99,15 @@ require_once '../../php/connect.php';
 
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Текст</label>
-                    <textarea id='textarea' style='height:300px;' name="desc" class="form-control"></textarea>
+                <label for="exampleInputPassword1" class="form-label">Текст</label>
+                    <div name="desc" id="froala"></div>
+                    <script type="text/javascript"
+                        src="../../node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
+                    <script> var editor = new FroalaEditor('#froala');</script>
+                    
+                    <textarea style="display:none;" name='desc' id='textarea' style='height:300px;' class="form-control">
+
+                    </textarea>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Ссылка на картинку</label>
@@ -109,7 +118,7 @@ require_once '../../php/connect.php';
                     <input name="date" type="text" class="form-control">
                 </div> -->
 
-                <button type="submit" class="btn btn-primary">Добавить</button>
+                <button type="submit" id='addNews' class="btn btn-primary">Добавить</button>
             </form>
 
         </div>

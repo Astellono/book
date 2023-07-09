@@ -70,3 +70,11 @@ date.forEach(element => {
     element.textContent = element.textContent.trim().substring(0, 11)
 });
 
+let text = document.querySelector('.fr-element')
+
+let textarea = document.getElementById('textarea')
+text.addEventListener('input', ()=>{
+   
+    textarea.value = text.innerHTML
+    console.log(textarea.value);
+})
