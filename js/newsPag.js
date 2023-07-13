@@ -17,7 +17,7 @@ if (list.length <= 3) {
     btnWatch.style.display = 'none'
 } else btnWatch.style.display = 'inline-block'
 
-btnWatch.addEventListener('click', () => {
+btnWatch.addEventListener('click', (e) => {
 
 
     btnClear.style.display = 'inline'
@@ -59,7 +59,6 @@ for (i = 0; i < counter - 3; i++) {
     list[i].style.display = 'none'
 
 }
-
 function scrollTo(hash) {
     location.hash = "#" + hash;
 }
@@ -73,8 +72,8 @@ date.forEach(element => {
 let text = document.querySelector('.fr-element')
 
 let textarea = document.getElementById('textarea')
-text.addEventListener('input', ()=>{
-   
+text.addEventListener('input', () => {
+
     textarea.value = text.innerHTML
     console.log(textarea.value);
 })

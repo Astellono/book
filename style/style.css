@@ -10,24 +10,32 @@ select,
 a {
     -webkit-tap-highlight-color: transparent;
 }
+
 html {
     scroll-behavior: smooth;
-    }
+}
+
+body {
+    position: relative;
+}
+
 * {
     font-family: 'Playfair Display', serif;
     box-sizing: border-box;
     text-align: justify;
 }
+
 .menuAdmin {
-    top:5px;
+    top: 5px;
     left: 0;
     position: absolute;
     border-bottom: 1px solid black;
     font-size: 18px;
 }
+
 header {
     position: relative;
-    min-height: 100px; 
+    min-height: 100px;
     width: 100%;
     padding-top: 2px;
 }
@@ -45,16 +53,24 @@ header {
     height: 40px;
     /* display: block !important; */
 }
+
 .flex {
     display: flex;
 }
+.modal-open {
+    display: block !important;
+    
+}
+.none {
+    display: none !important;
+}
 .header__title {
-    
-    
+
+
     margin-left: -6px;
     height: 40px;
     color: #5B2680;
-    
+
 
 }
 
@@ -66,6 +82,7 @@ header {
     height: 100%;
     padding: 0 20px;
 }
+
 .header__container {
     display: flex;
     justify-content: space-between;
@@ -79,10 +96,8 @@ nav {
     max-width: 560px;
     align-items: center;
     position: relative;
-    
-    height: 100%
 
-;
+    height: 100%;
 }
 
 
@@ -110,7 +125,7 @@ nav {
     display: none;
     width: 40px;
     height: 40px;
-    
+
 
 }
 
@@ -265,7 +280,7 @@ nav {
 }
 
 .news__item {
-    
+
     display: flex;
     margin: 30px 0;
     box-shadow: 0px 0px 22px 11px rgba(34, 60, 80, 0.2);
@@ -275,7 +290,7 @@ nav {
 
 
 .news__imgBox {
-    
+
     width: 30%;
     border-radius: 10px;
     overflow: hidden;
@@ -299,6 +314,7 @@ nav {
     padding-top: 5px;
     padding-bottom: 10px;
 }
+
 .news__btn {
     background-color: white;
     border: none;
@@ -306,14 +322,19 @@ nav {
     margin-right: 10px;
     font-size: 18px;
 }
+
 .news__textTitle {
     font-size: 24px;
     margin-bottom: 20px;
 }
 
 .news__textDesc {
+    
     margin-bottom: auto;
-
+    
+}
+.news__textDesc>p {
+    word-wrap: break-word;
 }
 
 .news__date {
@@ -322,8 +343,33 @@ nav {
     padding-right: 15px;
 }
 
+.modalMy {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    z-index: 100;
+}
 
+.modalMy__mainBlock {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+    outline: 1px solid black;
+    padding: 10px;
+}
 
+.modalMy__title {}
+
+.modalMy__desc {}
 
 @media screen and (max-width: 820px) {
 
@@ -344,36 +390,44 @@ nav {
         flex-direction: column-reverse;
         justify-content: center;
     }
+
     .news__list hr {
         display: none;
-        
+
     }
+
     .news__item {
         width: 100%;
         height: 300px;
         flex-direction: column;
-       
+
 
     }
+
     .news__imgBox {
-        
+
         width: 100%;
         margin-right: 0;
     }
+
     .news__textBlock {
         width: 100%;
     }
+
     .news__textTitle {
         margin-bottom: 10px;
     }
+
     .news__textDesc {
-       font-size: 12px;
-       margin-bottom: 10px;
-    
+        font-size: 12px;
+        margin-bottom: 10px;
+
     }
+
     .news__date {
         font-size: 12px;
-    } 
+    }
+
     .admin__item {
         flex-direction: column;
     }
@@ -395,19 +449,21 @@ nav {
     .menu {
         margin-top: 5px;
     }
+
     .header__container {
         flex-direction: row;
     }
+
     .menu__list {
         margin-top: 0;
-        
-    
+
+
         /* background-color: #2a0e3e; */
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: space-around;
-       
+
     }
 
     .menu__item {
@@ -423,17 +479,19 @@ nav {
         margin-top: 10px;
         margin-bottom: 10px;
         transition: all 0.5s ease-in-out;
-        
+
     }
+
     nav {
         width: 100%;
         background-color: white;
         position: fixed;
-        top:0;
+        top: 0;
         left: 500px;
         z-index: 100;
-        transition: all 0.5s ease-in-out ;
+        transition: all 0.5s ease-in-out;
     }
+
     .cross {
         display: block;
     }
@@ -443,4 +501,3 @@ nav {
     }
 
 }
-

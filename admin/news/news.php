@@ -26,9 +26,13 @@ require_once '../../php/connect.php';
         ul {
             padding-left: 0;
         }
+
+        /* .fr-wrapper>div:first-child {
+            display: none !important;
+        } */
     </style>
     <script src="../../js/newsPag.js" defer></script>
-   
+    <script src="../../js/modal.js" defer></script>
     <link href="../../node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
     <title>News</title>
 </head>
@@ -57,17 +61,17 @@ require_once '../../php/connect.php';
                         </div>
                         <div class="news__textBlock">
                             <div class="CRUD__block">
-                                <a href="change.php?id=<?= $news[0] ?>" style="margin-right: 7px;"><img
-                                        src="../svg/change.svg"></a>
-                                <a onclick="return confirm('Are you sure?')" href="dell.php?id=<?= $news[0] ?>"><img
-                                        src="../svg/del.svg"></a>
+                                <a onclick="event.stopPropagation();" href="change.php?id=<?= $news[0] ?>"
+                                    style="margin-right: 7px;"><img src="../svg/change.svg"></a>
+                                <a onclick="event.stopPropagation(); return confirm('Are you sure?'); "
+                                    href="dell.php?id=<?= $news[0] ?>"><img src="../svg/del.svg"></a>
                             </div>
                             <h3 class="news__textTitle">
                                 <?= $news[1] ?>
                             </h3>
-                            <p class="news__textDesc">
-                                <?= nl2br($news[2]) ?>
-                            </p>
+                            <div class="news__textDesc">
+                                <?= $news[2] ?>
+                            </div>
                             <p class="news__date">
                                 <?= $news[3] ?>
                             </p>
@@ -99,13 +103,14 @@ require_once '../../php/connect.php';
 
                 </div>
                 <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Текст</label>
+                    <label for="exampleInputPassword1" class="form-label">Текст</label>
                     <div name="desc" id="froala"></div>
                     <script type="text/javascript"
                         src="../../node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
                     <script> var editor = new FroalaEditor('#froala');</script>
-                    
-                    <textarea style="display:none;" name='desc' id='textarea' style='height:300px;' class="form-control">
+
+                    <textarea style="display:none;" name='desc' id='textarea' style='height:300px;'
+                        class="form-control">
 
                     </textarea>
                 </div>
@@ -121,6 +126,14 @@ require_once '../../php/connect.php';
                 <button type="submit" id='addNews' class="btn btn-primary">Добавить</button>
             </form>
 
+        </div>
+    </section>
+    <section class="modalMy" id='modal'>
+        <div class="container">
+            <div class="modalMy__mainBlock">
+                <h3 class="modalMy__title"> </h3>
+                <p class="modalMy__desc"> </p>
+            </div>
         </div>
     </section>
 </body>

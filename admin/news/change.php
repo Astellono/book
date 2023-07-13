@@ -76,7 +76,7 @@ $news = mysqli_fetch_array($news)
                 <label for="exampleInputPassword1" class="form-label" ">Ссылка на картинку</label>
                 <input name=" img" type="text" class="form-control" value="<?= $news['img'] ?>">
             </div>
-            <div class="mb-3">
+            <div class="mb-3" style='display:none;'>
                 <label for="exampleInputPassword1" class="form-label">Дата</label>
                 <input name="date" type="text" class="form-control" value="<?= $news['date'] ?>">
             </div>
