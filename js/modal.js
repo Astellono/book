@@ -23,11 +23,11 @@ modal.addEventListener('click', (e) => {
 items.forEach(element => {
 
     element.addEventListener('click', () => {
-
+        // modal.style.background-ima
         modal.classList.toggle('modal-open')
         document.body.style.overflowY = 'hidden'
-        itemDesc.textContent = element.querySelector('.news__textTitle').textContent
-        itemTitle.textContent = element.querySelector('.news__textDesc').textContent
+        itemDesc.textContent = element.querySelector('.news__textDesc').textContent
+        itemTitle.textContent = element.querySelector('.news__textTitle').textContent
 
     })
 

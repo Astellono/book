@@ -70,7 +70,7 @@ date.forEach(element => {
 });
 
 let text = document.querySelector('.fr-element')
-
+let btn = document.getElementById('addNews')
 let textarea = document.getElementById('textarea')
 text.addEventListener('input', () => {
 

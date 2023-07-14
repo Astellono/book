@@ -57,13 +57,16 @@ header {
 .flex {
     display: flex;
 }
+
 .modal-open {
     display: block !important;
-    
+    overflow-y: auto;
 }
+
 .none {
     display: none !important;
 }
+
 .header__title {
 
 
@@ -329,10 +332,14 @@ nav {
 }
 
 .news__textDesc {
-    
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     margin-bottom: auto;
-    
+
 }
+
 .news__textDesc>p {
     word-wrap: break-word;
 }
@@ -350,7 +357,10 @@ nav {
     left: 0;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(5px);
+   
+  
+    background-size: cover;
+    backdrop-filter: blur(10px);
     z-index: 100;
 }
 
@@ -367,9 +377,13 @@ nav {
     padding: 10px;
 }
 
-.modalMy__title {}
+.modalMy__title>* {
+    word-wrap: break-word;
+}
 
-.modalMy__desc {}
+.modalMy__desc {
+    word-wrap: break-word;
+}
 
 @media screen and (max-width: 820px) {
 
