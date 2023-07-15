@@ -33,6 +33,7 @@ require_once '../../php/connect.php';
     </style>
     <script src="../../js/newsPag.js" defer></script>
     <script src="../../js/modal.js" defer></script>
+   
     <link href="../../node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
     <title>News</title>
 </head>
@@ -123,7 +124,7 @@ require_once '../../php/connect.php';
                     <input name="date" type="text" class="form-control">
                 </div> -->
 
-                <button type="submit" id='addNews' class="btn btn-primary">Добавить</button>
+                <input type="submit" id='addNews' class="btn btn-primary">
             </form>
 
         </div>

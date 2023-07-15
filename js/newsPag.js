@@ -72,8 +72,17 @@ date.forEach(element => {
 let text = document.querySelector('.fr-element')
 let btn = document.getElementById('addNews')
 let textarea = document.getElementById('textarea')
-text.addEventListener('input', () => {
+// text.addEventListener('input', () => {
+
+//     textarea.value = text.innerHTML
+//     console.log(textarea.value);
+// })
+let form = document.getElementById('form')
+
+
+form.onsubmit = () => {
 
     textarea.value = text.innerHTML
-    console.log(textarea.value);
-})
+   
+}
+
