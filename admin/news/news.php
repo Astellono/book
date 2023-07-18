@@ -6,7 +6,7 @@ if (!isset($_COOKIE["admin"]))
 
 require_once '../../php/connect.php';
 
-?>
+    ?>
 
 
 <!DOCTYPE html>
@@ -33,7 +33,7 @@ require_once '../../php/connect.php';
     </style>
     <script src="../../js/newsPag.js" defer></script>
     <script src="../../js/modal.js" defer></script>
-   
+
     <link href="../../node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
     <title>News</title>
 </head>
@@ -96,7 +96,7 @@ require_once '../../php/connect.php';
             <h2 class="news__title" style="border-bottom:none; font-size:24px">
                 Добавить
             </h2>
-            <form action="add.php" id='form' class="form" method="post">
+            <form action="add.php" id='form' class="form" method="post" enctype="multipart/form-data">
 
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Заголовок</label>
@@ -115,9 +115,10 @@ require_once '../../php/connect.php';
 
                     </textarea>
                 </div>
+
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Ссылка на картинку</label>
-                    <input name=" img" type="text" class="form-control">
+                    <label for="exampleInputPassword1" class="form-label">Выбор картинки: </label>
+                    <input type="file" name="file">
                 </div>
                 <!-- <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Дата</label>
@@ -126,7 +127,7 @@ require_once '../../php/connect.php';
 
                 <input type="submit" id='addNews' class="btn btn-primary">
             </form>
-
+           
         </div>
     </section>
     <section class="modalMy" id='modal'>
