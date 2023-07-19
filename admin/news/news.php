@@ -6,7 +6,7 @@ if (!isset($_COOKIE["admin"]))
 
 require_once '../../php/connect.php';
 
-    ?>
+?>
 
 
 <!DOCTYPE html>
@@ -127,12 +127,15 @@ require_once '../../php/connect.php';
 
                 <input type="submit" id='addNews' class="btn btn-primary">
             </form>
-           
+
         </div>
     </section>
     <section class="modalMy" id='modal'>
         <div class="container">
             <div class="modalMy__mainBlock">
+                <div class="modalMy__imgBlock">
+                    <img src="" class="modalMy__img">
+                </div>
                 <h3 class="modalMy__title"> </h3>
                 <p class="modalMy__desc"> </p>
             </div>

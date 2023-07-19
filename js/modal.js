@@ -4,8 +4,8 @@ let modalMain = document.querySelector('.modalMy__mainBlock')
 let items = document.querySelectorAll('.news__item')
 let itemDesc = document.querySelector('.modalMy__desc')
 let itemTitle = document.querySelector('.modalMy__title')
-
-console.log(modal.classList.contains('modal-open'));
+let itemImg = document.querySelector('.modalMy__img')
+console.log(modal);
 
 modal.addEventListener('click', (e) => {
 
@@ -27,8 +27,11 @@ items.forEach(element => {
         if (document.getSelection().toString() === '') {
             modal.classList.toggle('modal-open')
             document.body.style.overflowY = 'hidden'
-            itemDesc.textContent = element.querySelector('.news__textDesc').textContent
-            itemTitle.textContent = element.querySelector('.news__textTitle').textContent
+            let imgSrc = element.querySelector('.news__img').getAttribute('src')
+            console.log(imgSrc);
+            itemDesc.innerHTML = element.querySelector('.news__textDesc').innerHTML
+            itemTitle.innerHTML = element.querySelector('.news__textTitle').innerHTML
+            itemImg.setAttribute('src', imgSrc)
         }
          
 

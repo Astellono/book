@@ -87,14 +87,14 @@ form.onsubmit = () => {
 }
 
 
-let imgIns = document.getElementById('insertImg')
+// let imgIns = document.getElementById('insertImg')
 
-imgIns.addEventListener('click', (e) => {
-    // e.preventDefault();
-    val = '<img class="news__imgInside" src="https://avatars.mds.yandex.net/i?id=7d264588aeab9c18da5d390b9d84964629e3a5f6-8819334-images-thumbs&n=13" >'
-    insertAtCursor(textarea, val)
+// imgIns.addEventListener('click', (e) => {
+//     // e.preventDefault();
+//     val = '<img class="news__imgInside" src="https://avatars.mds.yandex.net/i?id=7d264588aeab9c18da5d390b9d84964629e3a5f6-8819334-images-thumbs&n=13" >'
+//     insertAtCursor(textarea, val)
 
-})
+// })
 
 function insertAtCursor(myField, myValue) {
     //IE support
