@@ -19,6 +19,7 @@ require_once 'php/connect.php'
     <meta name="viewport" content="width=device-width, user-scalable=no" />
     <script src="js/burger.js" defer></script>
     <script src="js/newsPag.js" defer></script>
+    <script src="js/modal.js" defer></script>
     <title>Bifrǫst</title>
 </head>
 
@@ -37,34 +38,34 @@ require_once 'php/connect.php'
                 <img class="header__title" src="img/logo.png">
                 <img class="menu__burgerImg" src="img/burger.svg" id="burger" alt="" srcset="">
                 <nav id="menu">
-                        
-                        <ul class="menu__list" >
-                            <li class="menu__item cross" id="cross">
-                                <img class="menu__cross" src="img/cross.svg">
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#news">Главная</a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#news">Новости</a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#book">Книги</a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#author">Об авторе</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                
+
+                    <ul class="menu__list">
+                        <li class="menu__item cross" id="cross">
+                            <img class="menu__cross" src="img/cross.svg">
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#news">Главная</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#news">Новости</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#book">Книги</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#author">Об авторе</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
             </div>
         </header>
 
-       
 
-          
-       
+
+
+
         <section class="main">
             <div class="container container__main">
                 <div class="main__desc">
@@ -105,9 +106,9 @@ require_once 'php/connect.php'
                             <h3 class="news__textTitle">
                                 <?= $news[1] ?>
                             </h3>
-                            <p class="news__textDesc">
+                            <div class="news__textDesc">
                                 <?= nl2br($news[2]) ?>
-                            </p>
+                            </div>
                             <p class="news__date">
                                 <?= $news[3] ?>
                             </p>
@@ -121,6 +122,17 @@ require_once 'php/connect.php'
             <div class="news__btnBlock">
                 <button class="news__btn" id='watchNews'>Показать еще</button>
                 <button class="news__btn" id='clear'>Cвернуть</button>
+            </div>
+        </div>
+    </section>
+    <section class="modalMy" id='modal'>
+        <div class="container">
+            <div class="modalMy__mainBlock">
+                <div class="modalMy__imgBlock">
+                    <img src="" class="modalMy__img">
+                </div>
+                <h3 class="modalMy__title"> </h3>
+                <p class="modalMy__desc"> </p>
             </div>
         </div>
     </section>
