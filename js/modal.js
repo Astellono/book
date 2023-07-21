@@ -30,6 +30,10 @@ items.forEach(element => {
             let imgSrc = element.querySelector('.news__img').getAttribute('src')
             console.log(imgSrc);
             itemDesc.innerHTML = element.querySelector('.news__textDesc').innerHTML
+
+           
+
+
             itemTitle.innerHTML = element.querySelector('.news__textTitle').innerHTML
             itemImg.setAttribute('src', imgSrc)
         }

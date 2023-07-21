@@ -22,6 +22,7 @@ require_once '../../php/connect.php';
     <link rel="stylesheet" href="../../style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../style/slider.css">
     <style>
         ul {
             padding-left: 0;
@@ -33,6 +34,7 @@ require_once '../../php/connect.php';
     </style>
     <script src="../../js/newsPag.js" defer></script>
     <script src="../../js/modal.js" defer></script>
+    <script src="../../js/slider.js" defer></script>
 
     <link href="../../node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
     <title>News</title>
@@ -136,8 +138,30 @@ require_once '../../php/connect.php';
                 <div class="modalMy__imgBlock">
                     <img src="" class="modalMy__img">
                 </div>
+                <div class="itc-slider" data-slider="itc-slider" data-autoplay="true" data-interval="5000" data-swipe="true">
+                    <div class="itc-slider-wrapper">
+                        <div class="itc-slider-items">
+                            <!-- <div class="itc-slider-item">
+                                <img src="../../img/mainImg.jpg" class="modal__img" alt="" srcset="">
+                            </div>
+                            <div class="itc-slider-item">
+                                <img src="../../img/topImg.png" class="modal__img" alt="" srcset="">
+                            </div>
+                            <div class="itc-slider-item">
+                                <img src="../../img/mainImg.jpg" class="modal__img" alt="" srcset="">
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+                    <button class="itc-slider-btn itc-slider-btn-prev"></button>
+                    <button class="itc-slider-btn itc-slider-btn-next"></button>
+                </div>
                 <h3 class="modalMy__title"> </h3>
-                <p class="modalMy__desc"> </p>
+
+                <p class="modalMy__desc">
+
+                </p>
+                
             </div>
         </div>
     </section>

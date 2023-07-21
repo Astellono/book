@@ -21,28 +21,29 @@ $news = mysqli_fetch_array($news)
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <title>Change</title>
 
     <link rel="stylesheet" href="../../style/reset.css">
-
     <link rel="stylesheet" href="../admin.css">
-
+    <!-- <script src="../../js/newsPag.js" defer></script> -->
+    <script src="../../js/chFroala.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="../../node_modules/froala-editor/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+
     <style>
         .containerAdmin {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+
+
             width: 100%;
             height: 100vh
         }
 
         .form {
             width: 100%;
-            max-width: 600px;
-            padding: 0 20px;
+            max-width: 880px;
+            padding: 20px 20px;
         }
 
         .btn-primary {
@@ -60,7 +61,7 @@ $news = mysqli_fetch_array($news)
 
 <body>
     <div class="containerAdmin">
-        <form action="update.php" class="form" method="post">
+        <form action="update.php" id="form" class="form" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?= $news['id'] ?>">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Заголовок</label>
@@ -70,21 +71,28 @@ $news = mysqli_fetch_array($news)
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Текст</label>
-                <textarea style='height:300px; white-space: pre;' name="desc" class="form-control" value=""><?= $news['desc'] ?></textarea>
+
+                <div name="desc" id="froala"></div>
+                <script type="text/javascript"
+                    src="../../node_modules/froala-editor/js/froala_editor.pkgd.min.js"></script>
+                <script> var editor = new FroalaEditor('#froala');</script>
+
+
+                <textarea id='textarea' hidden="true" style='height:300px; white-space: pre;' name="desc"
+                    class="form-control" value=""><?= $news['desc'] ?></textarea>
+
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label" ">Ссылка на картинку</label>
-                <input name=" img" type="text" class="form-control" value="<?= $news['img'] ?>">
-            </div>
-            <div class="mb-3" style='display:none;'>
-                <label for="exampleInputPassword1" class="form-label">Дата</label>
-                <input name="date" type="text" class="form-control" value="<?= $news['date'] ?>">
+                <label for="exampleInputPassword1" class="form-label">Выбор картинки: </label>
+                <input type="file" name="file">
             </div>
 
-            <button type="submit" class="btn btn-primary">Изменить</button>
+
+            <input type="submit" class="btn btn-primary" value='Изменить'>
         </form>
 
     </div>
+
 </body>
 
 </html>
